@@ -1,0 +1,17 @@
+package protodemo;
+
+option java_package = "com.ikai.protodemo.proto";
+option java_outer_classname = "ForumThreadProtos";
+
+message Post {
+  required string title = 1;
+  required int32 id = 2;
+  required string body = 3;
+  required int64 timestamp = 4;
+
+  repeated Post reply = 5;
+}
+
+message Thread {
+  repeated Post post = 1;
+}
