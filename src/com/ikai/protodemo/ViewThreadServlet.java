@@ -35,6 +35,7 @@ public class ViewThreadServlet extends HttpServlet {
 	    ForumThreadProtos.Thread thread = ForumThreadProtos.Thread
 		    .parseFrom(data.getBytes());
 
+	    req.setAttribute("key", keyString);
 	    req.setAttribute("thread", thread);
 	    req.getRequestDispatcher("WEB-INF/view_thread.jsp").forward(req,
 		    resp);

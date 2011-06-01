@@ -18,11 +18,24 @@
   <%
       for (Post post : thread.getPostList()) {
   %>
-    <h1><%=post.getTitle()%></h1>
-    <p><%=post.getBody()%></p>
+  <h1><%=post.getTitle()%></h1>
+  <p><%=post.getBody()%></p>
   <%
       }
   %>
+
+  <form action="/reply" method="POST">
+    <p>
+      Title: <input type="text" name="title" />
+    </p>
+    <p>
+      Body:
+      <textarea name="body">Your body here ... </textarea>
+    </p>
+    <input type="text" name="key" value="<%= request.getParameter("key") %>" />
+    <input type="submit">
+  </form>
+
 
 </body>
 </html>
