@@ -8,5 +8,17 @@
 </head>
 <body>
     <h1>Viewing All Threads</h1>
+    
+    <form action="/add_thread" method="POST">
+        <p>
+            Title:
+            <input type="text" name="title" />
+        </p>
+        <p>
+            Body:
+            <textarea name="body">Your body here ... </textarea>
+        </p>        
+        <input type="submit">
+    </form>
 </body>
 </html>
