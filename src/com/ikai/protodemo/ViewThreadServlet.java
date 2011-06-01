@@ -8,6 +8,7 @@ import com.google.appengine.api.datastore.EntityNotFoundException;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 
+import com.ikai.protodemo.proto.ForumThreadProtos;
 import com.ikai.protodemo.proto.ForumThreadProtos.Post;
 
 import java.io.IOException;
@@ -30,9 +31,11 @@ public class ViewThreadServlet extends HttpServlet {
 	try {
 	    Entity entity = datastore.get(key);
 	    Blob data = (Blob) entity.getProperty("data");
-	    
-	    Post post = Post.parseFrom(data.getBytes());
-	    req.setAttribute("post", post);
+
+	    ForumThreadProtos.Thread thread = ForumThreadProtos.Thread
+		    .parseFrom(data.getBytes());
+
+	    req.setAttribute("thread", thread);
 	    req.getRequestDispatcher("WEB-INF/view_thread.jsp").forward(req,
 		    resp);
 

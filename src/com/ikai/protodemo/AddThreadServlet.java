@@ -7,6 +7,7 @@ import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 
+import com.ikai.protodemo.proto.ForumThreadProtos;
 import com.ikai.protodemo.proto.ForumThreadProtos.Post;
 
 import java.io.IOException;
@@ -31,12 +32,16 @@ public class AddThreadServlet extends HttpServlet {
 	Post post = Post.newBuilder().setId(id).setTitle(title).setBody(body)
 		.setTimestamp(timestamp).build();
 
+	ForumThreadProtos.Thread thread = ForumThreadProtos.Thread.newBuilder()
+						.addPost(post)
+						.build();
+
 	DatastoreService datastore = DatastoreServiceFactory
 		.getDatastoreService();
 	Entity entity = new Entity("Thread");
-	entity.setProperty("data", new Blob(post.toByteArray()));
+	entity.setProperty("data", new Blob(thread.toByteArray()));
 	Key key = datastore.put(entity);
-	
+
 	resp.sendRedirect("/view_thread?key=" + KeyFactory.keyToString(key));
 
     }
