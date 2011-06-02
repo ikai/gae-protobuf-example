@@ -8,7 +8,7 @@ import com.google.appengine.api.datastore.EntityNotFoundException;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 
-import com.ikai.protodemo.proto.ForumThreadProtos;
+import com.ikai.protodemo.proto.ForumThreadProtos.ForumThread;
 import com.ikai.protodemo.proto.ForumThreadProtos.Post;
 
 import java.io.IOException;
@@ -43,14 +43,14 @@ public class ReplyToThreadServlet extends HttpServlet {
 		Entity entity = datastore.get(key);
 		Blob data = (Blob) entity.getProperty("data");
 
-		ForumThreadProtos.Thread thread = ForumThreadProtos.Thread
+		ForumThread thread = ForumThread
 			.parseFrom(data.getBytes());
 
 		Post post = Post.newBuilder().setId(id).setTimestamp(timestamp)
 			.setTitle(title).setBody(body).build();
 		List<Post> posts = thread.getPostList();
 		
-		thread = ForumThreadProtos.Thread.newBuilder()
+		thread = ForumThread.newBuilder()
 			.addAllPost(posts).addPost(post).build();
 		
 		entity.setProperty("data", new Blob(thread.toByteArray()));

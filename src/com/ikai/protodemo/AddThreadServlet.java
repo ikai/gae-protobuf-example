@@ -7,7 +7,7 @@ import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 
-import com.ikai.protodemo.proto.ForumThreadProtos;
+import com.ikai.protodemo.proto.ForumThreadProtos.ForumThread;
 import com.ikai.protodemo.proto.ForumThreadProtos.Post;
 
 import java.io.IOException;
@@ -32,7 +32,7 @@ public class AddThreadServlet extends HttpServlet {
 	Post post = Post.newBuilder().setId(id).setTitle(title).setBody(body)
 		.setTimestamp(timestamp).build();
 
-	ForumThreadProtos.Thread thread = ForumThreadProtos.Thread.newBuilder()
+	ForumThread thread = ForumThread.newBuilder()
 						.addPost(post)
 						.build();
 

@@ -12,6 +12,6 @@ message Post {
   repeated Post reply = 5;
 }
 
-message Thread {
+message ForumThread {
   repeated Post post = 1;
 }

@@ -14,6 +14,8 @@ public class ViewAllThreadsServlet extends HttpServlet {
     public void doGet(HttpServletRequest req, HttpServletResponse resp)
 	    throws IOException, ServletException {
 	
+	
+	
 	req.getRequestDispatcher("WEB-INF/view_all_threads.jsp").forward(req, resp);
     }
 }

@@ -908,7 +908,7 @@ public final class ForumThreadProtos {
     // @@protoc_insertion_point(class_scope:protodemo.Post)
   }
   
-  public interface ThreadOrBuilder
+  public interface ForumThreadOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
     
     // repeated .protodemo.Post post = 1;
@@ -921,32 +921,32 @@ public final class ForumThreadProtos {
     com.ikai.protodemo.proto.ForumThreadProtos.PostOrBuilder getPostOrBuilder(
         int index);
   }
-  public static final class Thread extends
+  public static final class ForumThread extends
       com.google.protobuf.GeneratedMessage
-      implements ThreadOrBuilder {
-    // Use Thread.newBuilder() to construct.
-    private Thread(Builder builder) {
+      implements ForumThreadOrBuilder {
+    // Use ForumThread.newBuilder() to construct.
+    private ForumThread(Builder builder) {
       super(builder);
     }
-    private Thread(boolean noInit) {}
+    private ForumThread(boolean noInit) {}
     
-    private static final Thread defaultInstance;
-    public static Thread getDefaultInstance() {
+    private static final ForumThread defaultInstance;
+    public static ForumThread getDefaultInstance() {
       return defaultInstance;
     }
     
-    public Thread getDefaultInstanceForType() {
+    public ForumThread getDefaultInstanceForType() {
       return defaultInstance;
     }
     
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.ikai.protodemo.proto.ForumThreadProtos.internal_static_protodemo_Thread_descriptor;
+      return com.ikai.protodemo.proto.ForumThreadProtos.internal_static_protodemo_ForumThread_descriptor;
     }
     
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.ikai.protodemo.proto.ForumThreadProtos.internal_static_protodemo_Thread_fieldAccessorTable;
+      return com.ikai.protodemo.proto.ForumThreadProtos.internal_static_protodemo_ForumThread_fieldAccessorTable;
     }
     
     // repeated .protodemo.Post post = 1;
@@ -1019,41 +1019,41 @@ public final class ForumThreadProtos {
       return super.writeReplace();
     }
     
-    public static com.ikai.protodemo.proto.ForumThreadProtos.Thread parseFrom(
+    public static com.ikai.protodemo.proto.ForumThreadProtos.ForumThread parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static com.ikai.protodemo.proto.ForumThreadProtos.Thread parseFrom(
+    public static com.ikai.protodemo.proto.ForumThreadProtos.ForumThread parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static com.ikai.protodemo.proto.ForumThreadProtos.Thread parseFrom(byte[] data)
+    public static com.ikai.protodemo.proto.ForumThreadProtos.ForumThread parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static com.ikai.protodemo.proto.ForumThreadProtos.Thread parseFrom(
+    public static com.ikai.protodemo.proto.ForumThreadProtos.ForumThread parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static com.ikai.protodemo.proto.ForumThreadProtos.Thread parseFrom(java.io.InputStream input)
+    public static com.ikai.protodemo.proto.ForumThreadProtos.ForumThread parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static com.ikai.protodemo.proto.ForumThreadProtos.Thread parseFrom(
+    public static com.ikai.protodemo.proto.ForumThreadProtos.ForumThread parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
     }
-    public static com.ikai.protodemo.proto.ForumThreadProtos.Thread parseDelimitedFrom(java.io.InputStream input)
+    public static com.ikai.protodemo.proto.ForumThreadProtos.ForumThread parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input)) {
@@ -1062,7 +1062,7 @@ public final class ForumThreadProtos {
         return null;
       }
     }
-    public static com.ikai.protodemo.proto.ForumThreadProtos.Thread parseDelimitedFrom(
+    public static com.ikai.protodemo.proto.ForumThreadProtos.ForumThread parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1073,12 +1073,12 @@ public final class ForumThreadProtos {
         return null;
       }
     }
-    public static com.ikai.protodemo.proto.ForumThreadProtos.Thread parseFrom(
+    public static com.ikai.protodemo.proto.ForumThreadProtos.ForumThread parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static com.ikai.protodemo.proto.ForumThreadProtos.Thread parseFrom(
+    public static com.ikai.protodemo.proto.ForumThreadProtos.ForumThread parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1088,7 +1088,7 @@ public final class ForumThreadProtos {
     
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.ikai.protodemo.proto.ForumThreadProtos.Thread prototype) {
+    public static Builder newBuilder(com.ikai.protodemo.proto.ForumThreadProtos.ForumThread prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -1101,18 +1101,18 @@ public final class ForumThreadProtos {
     }
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.ikai.protodemo.proto.ForumThreadProtos.ThreadOrBuilder {
+       implements com.ikai.protodemo.proto.ForumThreadProtos.ForumThreadOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.ikai.protodemo.proto.ForumThreadProtos.internal_static_protodemo_Thread_descriptor;
+        return com.ikai.protodemo.proto.ForumThreadProtos.internal_static_protodemo_ForumThread_descriptor;
       }
       
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.ikai.protodemo.proto.ForumThreadProtos.internal_static_protodemo_Thread_fieldAccessorTable;
+        return com.ikai.protodemo.proto.ForumThreadProtos.internal_static_protodemo_ForumThread_fieldAccessorTable;
       }
       
-      // Construct using com.ikai.protodemo.proto.ForumThreadProtos.Thread.newBuilder()
+      // Construct using com.ikai.protodemo.proto.ForumThreadProtos.ForumThread.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1147,24 +1147,24 @@ public final class ForumThreadProtos {
       
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.ikai.protodemo.proto.ForumThreadProtos.Thread.getDescriptor();
+        return com.ikai.protodemo.proto.ForumThreadProtos.ForumThread.getDescriptor();
       }
       
-      public com.ikai.protodemo.proto.ForumThreadProtos.Thread getDefaultInstanceForType() {
-        return com.ikai.protodemo.proto.ForumThreadProtos.Thread.getDefaultInstance();
+      public com.ikai.protodemo.proto.ForumThreadProtos.ForumThread getDefaultInstanceForType() {
+        return com.ikai.protodemo.proto.ForumThreadProtos.ForumThread.getDefaultInstance();
       }
       
-      public com.ikai.protodemo.proto.ForumThreadProtos.Thread build() {
-        com.ikai.protodemo.proto.ForumThreadProtos.Thread result = buildPartial();
+      public com.ikai.protodemo.proto.ForumThreadProtos.ForumThread build() {
+        com.ikai.protodemo.proto.ForumThreadProtos.ForumThread result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
       
-      private com.ikai.protodemo.proto.ForumThreadProtos.Thread buildParsed()
+      private com.ikai.protodemo.proto.ForumThreadProtos.ForumThread buildParsed()
           throws com.google.protobuf.InvalidProtocolBufferException {
-        com.ikai.protodemo.proto.ForumThreadProtos.Thread result = buildPartial();
+        com.ikai.protodemo.proto.ForumThreadProtos.ForumThread result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
             result).asInvalidProtocolBufferException();
@@ -1172,8 +1172,8 @@ public final class ForumThreadProtos {
         return result;
       }
       
-      public com.ikai.protodemo.proto.ForumThreadProtos.Thread buildPartial() {
-        com.ikai.protodemo.proto.ForumThreadProtos.Thread result = new com.ikai.protodemo.proto.ForumThreadProtos.Thread(this);
+      public com.ikai.protodemo.proto.ForumThreadProtos.ForumThread buildPartial() {
+        com.ikai.protodemo.proto.ForumThreadProtos.ForumThread result = new com.ikai.protodemo.proto.ForumThreadProtos.ForumThread(this);
         int from_bitField0_ = bitField0_;
         if (postBuilder_ == null) {
           if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1189,16 +1189,16 @@ public final class ForumThreadProtos {
       }
       
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.ikai.protodemo.proto.ForumThreadProtos.Thread) {
-          return mergeFrom((com.ikai.protodemo.proto.ForumThreadProtos.Thread)other);
+        if (other instanceof com.ikai.protodemo.proto.ForumThreadProtos.ForumThread) {
+          return mergeFrom((com.ikai.protodemo.proto.ForumThreadProtos.ForumThread)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
       
-      public Builder mergeFrom(com.ikai.protodemo.proto.ForumThreadProtos.Thread other) {
-        if (other == com.ikai.protodemo.proto.ForumThreadProtos.Thread.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.ikai.protodemo.proto.ForumThreadProtos.ForumThread other) {
+        if (other == com.ikai.protodemo.proto.ForumThreadProtos.ForumThread.getDefaultInstance()) return this;
         if (postBuilder_ == null) {
           if (!other.post_.isEmpty()) {
             if (post_.isEmpty()) {
@@ -1460,15 +1460,15 @@ public final class ForumThreadProtos {
         return postBuilder_;
       }
       
-      // @@protoc_insertion_point(builder_scope:protodemo.Thread)
+      // @@protoc_insertion_point(builder_scope:protodemo.ForumThread)
     }
     
     static {
-      defaultInstance = new Thread(true);
+      defaultInstance = new ForumThread(true);
       defaultInstance.initFields();
     }
     
-    // @@protoc_insertion_point(class_scope:protodemo.Thread)
+    // @@protoc_insertion_point(class_scope:protodemo.ForumThread)
   }
   
   private static com.google.protobuf.Descriptors.Descriptor
@@ -1477,10 +1477,10 @@ public final class ForumThreadProtos {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_protodemo_Post_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_protodemo_Thread_descriptor;
+    internal_static_protodemo_ForumThread_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_protodemo_Thread_fieldAccessorTable;
+      internal_static_protodemo_ForumThread_fieldAccessorTable;
   
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1493,9 +1493,9 @@ public final class ForumThreadProtos {
       "\n\021forumthread.proto\022\tprotodemo\"b\n\004Post\022\r" +
       "\n\005title\030\001 \002(\t\022\n\n\002id\030\002 \002(\005\022\014\n\004body\030\003 \002(\t\022" +
       "\021\n\ttimestamp\030\004 \002(\003\022\036\n\005reply\030\005 \003(\0132\017.prot" +
-      "odemo.Post\"\'\n\006Thread\022\035\n\004post\030\001 \003(\0132\017.pro" +
-      "todemo.PostB-\n\030com.ikai.protodemo.protoB" +
-      "\021ForumThreadProtos"
+      "odemo.Post\",\n\013ForumThread\022\035\n\004post\030\001 \003(\0132" +
+      "\017.protodemo.PostB-\n\030com.ikai.protodemo.p" +
+      "rotoB\021ForumThreadProtos"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -1510,14 +1510,14 @@ public final class ForumThreadProtos {
               new java.lang.String[] { "Title", "Id", "Body", "Timestamp", "Reply", },
               com.ikai.protodemo.proto.ForumThreadProtos.Post.class,
               com.ikai.protodemo.proto.ForumThreadProtos.Post.Builder.class);
-          internal_static_protodemo_Thread_descriptor =
+          internal_static_protodemo_ForumThread_descriptor =
             getDescriptor().getMessageTypes().get(1);
-          internal_static_protodemo_Thread_fieldAccessorTable = new
+          internal_static_protodemo_ForumThread_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_protodemo_Thread_descriptor,
+              internal_static_protodemo_ForumThread_descriptor,
               new java.lang.String[] { "Post", },
-              com.ikai.protodemo.proto.ForumThreadProtos.Thread.class,
-              com.ikai.protodemo.proto.ForumThreadProtos.Thread.Builder.class);
+              com.ikai.protodemo.proto.ForumThreadProtos.ForumThread.class,
+              com.ikai.protodemo.proto.ForumThreadProtos.ForumThread.Builder.class);
           return null;
         }
       };
