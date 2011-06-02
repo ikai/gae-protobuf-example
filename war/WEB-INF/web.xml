@@ -1,44 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xmlns="http://java.sun.com/xml/ns/javaee"
-xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
-http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
-	<servlet>
-		<servlet-name>AddThreadServlet</servlet-name>
-		<servlet-class>com.ikai.protodemo.AddThreadServlet</servlet-class>
-	</servlet>
-    <servlet>
-        <servlet-name>ReplyToThreadServlet</servlet-name>
-        <servlet-class>com.ikai.protodemo.ReplyToThreadServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ViewAllThreadsServlet</servlet-name>
-        <servlet-class>com.ikai.protodemo.ViewAllThreadsServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ViewThreadServlet</servlet-name>
-        <servlet-class>com.ikai.protodemo.ViewThreadServlet</servlet-class>
-    </servlet>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+  xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+  version="2.5">
 
-	<servlet-mapping>
-		<servlet-name>AddThreadServlet</servlet-name>
-		<url-pattern>/add_thread</url-pattern>
-	</servlet-mapping>
+  <filter>
+    <filter-name>SetUserFilter</filter-name>
+    <filter-class>com.ikai.protodemo.SetUserFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>SetUserFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
 
-    <servlet-mapping>
-        <servlet-name>ReplyToThreadServlet</servlet-name>
-        <url-pattern>/reply</url-pattern>
-    </servlet-mapping>
+  <servlet>
+    <servlet-name>AddThreadServlet</servlet-name>
+    <servlet-class>com.ikai.protodemo.AddThreadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ReplyToThreadServlet</servlet-name>
+    <servlet-class>com.ikai.protodemo.ReplyToThreadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ViewAllThreadsServlet</servlet-name>
+    <servlet-class>com.ikai.protodemo.ViewAllThreadsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ViewThreadServlet</servlet-name>
+    <servlet-class>com.ikai.protodemo.ViewThreadServlet</servlet-class>
+  </servlet>
 
-    <servlet-mapping>
-        <servlet-name>ViewAllThreadsServlet</servlet-name>
-        <url-pattern>/all</url-pattern>
-    </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddThreadServlet</servlet-name>
+    <url-pattern>/add_thread</url-pattern>
+  </servlet-mapping>
 
-    <servlet-mapping>
-        <servlet-name>ViewThreadServlet</servlet-name>
-        <url-pattern>/view_thread</url-pattern>
-    </servlet-mapping>
-  
+  <servlet-mapping>
+    <servlet-name>ReplyToThreadServlet</servlet-name>
+    <url-pattern>/reply</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ViewAllThreadsServlet</servlet-name>
+    <url-pattern>/all</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>ViewThreadServlet</servlet-name>
+    <url-pattern>/view_thread</url-pattern>
+  </servlet-mapping>
+
+  <welcome-file-list>
+    <welcome-file>ViewAllThreadsServlet</welcome-file>
+  </welcome-file-list>
+
 </web-app>
