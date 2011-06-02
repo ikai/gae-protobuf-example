@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
   pageEncoding="UTF-8"%>
-<%@ page import="com.ikai.protodemo.proto.ForumThreadProtos"%>
+<%@ page import="com.ikai.protodemo.proto.ForumThreadProtos.ForumThread"%>
 <%@ page import="com.ikai.protodemo.proto.ForumThreadProtos.Post"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -11,7 +11,7 @@
 </head>
 <body>
   <%
-      ForumThreadProtos.Thread thread = (ForumThreadProtos.Thread) request
+      ForumThread thread = (ForumThread) request
   		    .getAttribute("thread");
   %>
 
@@ -32,7 +32,7 @@
       Body:
       <textarea name="body">Your body here ... </textarea>
     </p>
-    <input type="text" name="key" value="<%= request.getParameter("key") %>" />
+    <input type="hidden" name="key" value="<%= request.getParameter("key") %>" />
     <input type="submit">
   </form>
 

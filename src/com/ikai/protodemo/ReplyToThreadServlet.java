@@ -12,6 +12,7 @@ import com.ikai.protodemo.proto.ForumThreadProtos.ForumThread;
 import com.ikai.protodemo.proto.ForumThreadProtos.Post;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
@@ -54,6 +55,7 @@ public class ReplyToThreadServlet extends HttpServlet {
 			.addAllPost(posts).addPost(post).build();
 		
 		entity.setProperty("data", new Blob(thread.toByteArray()));
+		entity.setProperty("lastUpdated", new Date());
 		datastore.put(entity);
 
 	    } catch (EntityNotFoundException e) {

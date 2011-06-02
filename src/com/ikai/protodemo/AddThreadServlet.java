@@ -11,6 +11,7 @@ import com.ikai.protodemo.proto.ForumThreadProtos.ForumThread;
 import com.ikai.protodemo.proto.ForumThreadProtos.Post;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.Random;
 
 import javax.servlet.http.HttpServlet;
@@ -40,6 +41,10 @@ public class AddThreadServlet extends HttpServlet {
 		.getDatastoreService();
 	Entity entity = new Entity("Thread");
 	entity.setProperty("data", new Blob(thread.toByteArray()));
+	entity.setProperty("created", new Date());	
+	entity.setProperty("lastUpdated", new Date());
+	entity.setUnindexedProperty("title", title);
+	
 	Key key = datastore.put(entity);
 
 	resp.sendRedirect("/view_thread?key=" + KeyFactory.keyToString(key));
